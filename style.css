@@ -1,0 +1,274 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Distribui a logo e os links nos extremos */
+  align-items: center; /* Centraliza verticalmente os itens */
+  background: #191308;
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f4f4f4;
+  text-decoration: none;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #5386e4;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #5386e4, #502274);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  background: #ceff1a;
+  color: #5386e4;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: #f9f9f9;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding: 50px;
+  background-color: #f9f9f9;
+  height: 100vh;
+  margin: 0;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1 1 30%;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+.about-photo {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-photo {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/*resume content*/
+
+.resume-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f8f9fa; /* Fundo claro para destacar a seção */
+  color: #333; /* Cor de texto agradável */
+}
+
+.resume-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: black; /* Destaque da cor do título */
+}
+
+.resume-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Espaço entre texto e botão */
+}
+
+.resume-text {
+  max-width: 600px; /* Limita a largura para facilitar a leitura */
+  line-height: 1.6; /* Melhora a legibilidade */
+}
+
+.resume-text p {
+  margin: 10px 0;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5386e4; /* Cor do botão */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #502274; /* Efeito ao passar o mouse */
+}
+
+/* Work Section */
+.work {
+  padding: 60px 20px;
+  background: #f4f4f4;
+  text-align: center;
+  height: 100vh;
+}
+
+.work h2 {
+  margin-bottom: 20px;
+}
+
+.project-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 250px;
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact {
+  height: 100vh;
+  background: linear-gradient(135deg, #5386e4, #502274);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.contact h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.contact a {
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+}
+
+.contact a:hover {
+  color: black; /* Transição suave para hover */
+}
+
+.social-links {
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.social-links a {
+  margin: 0 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  color: white;
+}
+
+.social-links a:hover {
+  color: black;
+  /* Cor de destaque ao passar o mouse */
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #191308;
+  color: white;
+  margin: 0;
+}
