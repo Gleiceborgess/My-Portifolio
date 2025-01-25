@@ -54,6 +54,20 @@ body {
   color: #4c9f70;
 }
 
+ @media (max-width: 768px) {
+            nav ul {
+                justify-content: space-around;
+            }
+
+            nav ul li {
+                padding: 10px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+        }
+
 /* Hero Section */
 .hero {
   height: 100vh;
