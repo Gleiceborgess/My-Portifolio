@@ -1,4 +1,3 @@
-/* General Styles */
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +9,7 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #fff;
+  margin: 0;
 }
 
 /* Navbar */
@@ -19,7 +19,7 @@ body {
   align-items: center; /* Centraliza verticalmente os itens */
   background: #191308;
   color: white;
-  padding: 10px 20px;
+  padding: 10px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -29,9 +29,10 @@ body {
 
 .navbar .logo {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #f4f4f4;
   text-decoration: none;
+  padding-left: 15px;
 }
 
 .navbar .nav-links {
@@ -39,6 +40,7 @@ body {
   display: flex;
   gap: 15px;
   margin: 0;
+  padding-right: 15px;
 }
 
 .navbar .nav-links a {
@@ -49,19 +51,22 @@ body {
 }
 
 .navbar .nav-links a:hover {
-  color: #5386e4;
+  color: #4c9f70;
 }
 
 /* Hero Section */
 .hero {
   height: 100vh;
-  background: linear-gradient(135deg, #5386e4, #502274);
+  background: linear-gradient(
+    90deg,
+    hsla(165, 60%, 11%, 1) 0%,
+    hsla(149, 54%, 31%, 1) 100%
+  );
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 20px;
 }
 
 .hero h1 {
@@ -75,17 +80,20 @@ body {
 }
 
 .hero .btn {
-  background: #ceff1a;
-  color: #5386e4;
+  color: #fff;
   padding: 10px 20px;
   text-decoration: none;
   font-weight: 700;
-  border-radius: 5px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-color: #fff;
+  border-style: solid;
   transition: background 0.3s ease;
 }
 
 .hero .btn:hover {
-  background: #f9f9f9;
+  border-color: #191308;
+  color: #191308;
 }
 
 /* About Section */
@@ -102,8 +110,9 @@ body {
 .about-container {
   display: flex;
   flex-direction: row;
-  width: auto;
+  width: 100%;
   align-items: center;
+  flex-wrap: wrap; /* Permite que os elementos quebrem linha */
 }
 
 .about-text {
@@ -111,21 +120,58 @@ body {
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
   color: #333;
-  margin-right: 15px;
+  margin: 15px; /* Ajustado para espaçamento em telas pequenas */
   font-size: 18px;
+  text-align: justify;
 }
 
 .about-photo {
   flex: 1 1 40%;
   display: flex;
   justify-content: center;
+  margin: 15px; /* Adicionado para espaçamento */
 }
 
 .profile-photo {
-  max-width: 300px;
+  max-width: 300px; /* Mantém o tamanho original */
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Consultas de mídia para responsividade */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column-reverse; /* Alinha os itens em coluna */
+    padding: 20px;
+    height: auto; /* Permite que a altura se ajuste automaticamente */
+  }
+
+  .about-text {
+    flex: 1 1 100%;
+    font-size: 16px; /* Reduz o tamanho da fonte em telas menores */
+    margin: 10px 0; /* Reduz o espaçamento */
+  }
+
+  .about-photo {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+
+  .profile-photo {
+    max-width: 300px; /* Mantém o tamanho original mesmo em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text {
+    font-size: 14px; /* Fonte menor para telas muito pequenas */
+    line-height: 1.4;
+  }
+
+  .profile-photo {
+    max-width: 250px; /* Ajusta a imagem para telas muito pequenas */
+  }
 }
 
 /*resume content*/
@@ -165,26 +211,30 @@ body {
 }
 
 .download-btn {
-  display: inline-block;
+  background: #4c9f70;
+  color: #fff;
   padding: 10px 20px;
-  background-color: #5386e4; /* Cor do botão */
-  color: white;
   text-decoration: none;
+  font-weight: 700;
   border-radius: 5px;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .download-btn:hover {
-  background-color: #502274; /* Efeito ao passar o mouse */
+  background-color: #191308; /* Efeito ao passar o mouse */
 }
 
 /* Work Section */
 .work {
-  padding: 60px 20px;
-  background: #f4f4f4;
-  text-align: center;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
 .work h2 {
@@ -194,6 +244,7 @@ body {
 .project-gallery {
   display: flex;
   justify-content: center;
+  flex-direction: row;
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -204,6 +255,9 @@ body {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 250px;
+  position: relative; /* Necessário para o hover */
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
 }
 
 .project-card h3 {
@@ -211,10 +265,110 @@ body {
   margin-bottom: 10px;
 }
 
-/* Contact Section */
+.project-description,
+.project-meta {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none; /* Oculto por padrão */
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card:hover .preview {
+  display: flex; /* Aparece no hover */
+}
+
+.preview iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+}
+
+/* Galeria */
+.project-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Links dos projetos */
+.project-link {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 16px;
+  color: #4c9f70;
+  text-decoration: none;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #4c9f70;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+  text-decoration: none;
+  color: #191308;
+  border-color: #191308;
+}
+
+/* Pré-visualização */
+.preview iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
 .contact {
   height: 100vh;
-  background: linear-gradient(135deg, #5386e4, #502274);
+  background: linear-gradient(
+    90deg,
+    hsla(165, 60%, 11%, 1) 0%,
+    hsla(149, 54%, 31%, 1) 100%
+  );
   color: white;
   display: flex;
   align-items: center;
