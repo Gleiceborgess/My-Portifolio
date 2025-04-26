@@ -112,26 +112,22 @@
 }
 
 .typing-demo {
-  width: 70vw; /* Ajuste da largura para 80% da largura da tela */
+  width: 80vw; /* Largura ajustável */
   max-width: 35ch; /* Limita a largura a 35 caracteres */
   animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
-  white-space: nowrap;
+  white-space: nowrap; /* Impede quebra de linha */
   overflow: hidden;
   border-right: 3px solid;
   font-family: monospace;
-  font-size: 4vw;
+  font-size: 2em;
   color: whitesmoke;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
-
-@keyframes blink {
-  30% {
-    border-color: transparent;
+@media screen and (max-width: 768px) {
+  .typing-demo {
+    width: 100%; /* Aumenta a largura para ocupar toda a tela */
+    white-space: normal; /* Permite a quebra de linha em telas menores */
+    font-size: 1.5em; /* Reduz o tamanho da fonte para caber na tela */
   }
 }
 
