@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gleice Portifolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="#" class="navbar-logo">&copy; Gleice</a>
+        <ul class="navbar-menu">
+          <li><a href="#about-myself">About me</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="navbar-toggle" id="navbar-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+    <script>
+      const navbarToggle = document.getElementById("navbar-toggle");
+      const navbarMenu = document.querySelector(".navbar-menu");
+
+      navbarToggle.addEventListener("click", () => {
+        navbarMenu.classList.toggle("active");
+        navbarToggle.classList.toggle("active");
+      });
+    </script>
+    <div class="wrapper">
+      <div class="typing-demo">Hi I'm Gleice a frontend developer.</div>
+    </div>
+    <section id="about-myself" class="about-myself">
+      <section class="about-myself">
+        <img src="gleice foto portifolio.jpg" alt="Photo of Gleice" />
+        <p>
+          I'm <span>Gleice</span>.. a dedicated Computer Science student with a
+          diverse professional background. My journey began in customer service,
+          where I honed my communication and problem-solving skills, and as an
+          English teacher, inspiring learners of all ages. For the past two
+          years, I've been fully immersed in studying front-end development and
+          User Experience (UX) design. This transition reflects my passion for
+          creating intuitive and visually appealing digital experiences that
+          seamlessly combine functionality and user-centered design. With my
+          strong foundation in communication and a growing expertise in
+          development, I aim to build engaging solutions that connect with users
+          and deliver impactful results.
+        </p>
+      </section>
+    </section>
+    <section id="resume" class="resume">
+      <section class="experience">
+        <div class="title-experience">
+          <h1 class="typing-demo">My Professional Experience</h1>
+        </div>
+        <div class="experience-list">
+          <div class="experience-card">
+            <h2>Web Designer</h2>
+            <div class="experience-time">Freelancer · 2024 - Present</div>
+            <div class="experience-description">
+              Designed user-centered websites and landing pages, applying UI/UX
+              design principles to enhance user experience and functionality.
+            </div>
+          </div>
+          <div class="experience-card">
+            <h2>English Teacher</h2>
+            <div class="experience-time">2023 - Present</div>
+            <div class="experience-description">
+              Delivered individualized English lessons to students of all ages,
+              focusing on enhancing communication skills and confidence in
+              language use.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills">
+        <div class="content">
+          <h2 class="typing-demo">My Skills</h2>
+          <ul class="skills-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Figma</li>
+          </ul>
+        </div>
+      </section>
+      <div class="content">
+        <a href="./CV ux design english.pdf" download>
+          <button class="btn-resume">Download my Resume</button>
+        </a>
+      </div>
+    </section>
+    <section id="work" class="work">
+      <section class="projects">
+        <div class="title-work">
+          <h2>My Projects</h2>
+        </div>
+        <div class="project-card">
+          <div class="project-title">
+            Amandda Beauty
+            <span>(2024, Amsterdam)</span>
+          </div>
+          <p class="project-description">
+            Developed a responsive landing page for the beauty clinic Amandda
+            Beauty, with a focus on performance, basic SEO, and user experience.
+          </p>
+          <p class="project-technologies">
+            <strong>Technologies:</strong> HTML5, CSS3, JavaScript
+          </p>
+          <p class="project-results">
+            <strong>Results:</strong> The implementation led to a significant
+            increase in organic traffic and conversions, directly contributing
+            to the clinic’s customer growth and online visibility.
+          </p>
+          <div class="link-website">
+            <a href="https://flourishing-begonia-e2b59f.netlify.app/"
+              >View Website</a
+            >
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">
+            Cadore Brows
+            <span>(2024, Amsterdam)</span>
+          </div>
+          <p class="project-description">
+            Designed and developed a responsive website for the beauty clinic
+            Cadore Brows, focused on optimizing user experience and boosting
+            online presence.
+          </p>
+          <p class="project-technologies">
+            <strong>Technologies:</strong> HTML5, CSS3, JavaScript
+          </p>
+          <p class="project-results">
+            <strong>Results:</strong> Enhanced customer engagement and increased
+            online bookings, contributing to the clinic’s visibility and growth.
+          </p>
+          <div class="link-website">
+            <a href="https://cadorebrows.com/">View Website</a>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section id="contact" class="contact">
+      <footer class="footer">
+        <div class="content">
+          <p>Connect with me:</p>
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/gleice-borges-de-jesus-silva/"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/Gleiceborgess" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="mailto:gleiceborgess19@gmail.com">
+              <i class="fas fa-envelope"></i> Email
+            </a>
+          </div>
+          <p class="copy">
+            &copy; 2025 Gleice Borges De Jesus Silva. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,537 @@
+* {
+  margin: 0;
+
+  html {
+    scroll-behavior: smooth;
+  }
+  .navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #1e1e1e;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .navbar-logo {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar-menu li {
+    margin: 0 15px;
+  }
+
+  .navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-menu a:hover {
+    color: #8cffda;
+  }
+
+  /* Menu hamburguer */
+  .navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .navbar-toggle .bar {
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    margin: 5px 5px;
+    transition: 0.3s;
+  }
+
+  /* Responsividade: exibe o menu hamburguer em telas pequenas */
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      background-color: #1e1e1e;
+      position: absolute;
+      top: 60px;
+      left: 5px;
+      right: 5px;
+      padding: 20px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-menu.active {
+      display: flex;
+    }
+
+    .navbar-toggle {
+      display: flex;
+    }
+  }
+
+  /* Animations for the hamburger menu */
+  .navbar-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .navbar-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+.wrapper {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background-color: #1e1e1e;
+}
+
+.typing-demo {
+  width: 35ch;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+  color: whitesmoke;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  30% {
+    border-color: transparent;
+  }
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+}
+
+.about-myself {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 3rem auto;
+  flex-wrap: wrap;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.about-myself img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.about-myself p {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #1e1e1e;
+}
+
+.about-myself span {
+  font-weight: bold;
+  color: #80ded9; /* ou qualquer cor destaque */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+  .about-myself {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-myself img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+/*EXPERIENCE*/
+
+/* Estilo Geral */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Seção de Experiência Profissional */
+.experience {
+  background-color: #1e1e1e;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experience .title-experience {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.experience .title-experience h1 {
+  font-size: 2.5em;
+  font-family: monospace;
+  color: #fff;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.experience-card {
+  background-color: #333;
+  border: 2px solid #444;
+  border-radius: 8px;
+  padding: 30px;
+  flex: 1 1 calc(50% - 20px);
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.experience-card h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  font-family: monospace;
+}
+
+.experience-time {
+  color: #80ded9;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.experience-description {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #f1f1f1;
+}
+
+/* Animação de digitação */
+.typing-demo {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5em;
+  color: #f1f1f1;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #8cffda;
+  width: 0;
+  animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .experience-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .experience-card {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .experience {
+    padding: 60px 15%;
+  }
+}
+/* Seção de Skills */
+.skills {
+  background-color: #1e1e1e;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.skills .content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skills h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skills-list li {
+  background-color: #333;
+  border: 2px solid #444;
+  border-radius: 8px;
+  padding: 20px 30px;
+  font-size: 1.2em;
+  color: #80ded9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Animação ao passar o mouse */
+.skills-list li:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(128, 222, 217, 0.5);
+}
+
+/* Efeito de scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilo Geral */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.resume {
+  background-color: #1e1e1e;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.resume .content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn-resume {
+  background-color: transparent;
+  border: 2px solid #80ded9;
+  color: #80ded9;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: monospace;
+}
+
+/* Animação suave no hover */
+.btn-resume:hover {
+  background-color: #80ded9;
+  color: #1e1e1e;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(128, 222, 217, 0.5);
+}
+/* Work */
+
+.title-work h2 {
+  font-size: 2.5em;
+  align-items: center;
+  margin-bottom: 40px;
+  font-family: monospace;
+  text-align: center;
+  color: #fff;
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+}
+
+.projects {
+  background-color: #1e1e1e;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column; /* Garante que os cards fiquem em coluna por padrão */
+  gap: 20px; /* Espaço entre os cards */
+  justify-content: center; /* Centraliza os cards */
+  align-items: stretch; /* Centraliza os cards */
+}
+
+.project-card {
+  background-color: #333;
+  border: 2px solid #444;
+  border-radius: 8px;
+  padding: 30px;
+  color: #fff;
+  flex: 1 1 calc(33.33% - 20px);
+  box-sizing: border-box;
+  margin-bottom: 40px; /* Espaço entre os cards verticalmente */
+  position: relative; /* Para posicionar a borda do círculo no topo */
+  overflow: hidden; /* Esconde elementos fora do card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de transição suave */
+}
+
+.project-card:hover {
+  transform: translateY(-10px); /* Eleva o card ao passar o mouse */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+.project-title span {
+  font-size: 0.8em;
+  color: #80ded9;
+}
+
+.project-description,
+.project-technologies,
+.project-results {
+  margin-bottom: 15px;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+strong {
+  color: #80ded9;
+}
+
+.link-website a {
+  text-decoration: none;
+  color: #80ded9;
+}
+
+.link-website a:hover {
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .projects {
+    flex-direction: row; /* Alinha os cards horizontalmente */
+    flex-wrap: wrap; /* Faz os cards se moverem para a linha seguinte */
+    justify-content: center; /* Centraliza os cards */
+  }
+
+  .project-card {
+    flex: 1 1 calc(50% - 20px); /* 2 cards por linha em telas médias */
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    flex-direction: column; /* Volta para o layout em coluna em telas pequenas */
+  }
+
+  .project-card {
+    flex: 1 1 100%; /* 1 card por linha em telas pequenas */
+  }
+}
+
+.footer {
+  background-color: #1e1e1e;
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+  font-family: monospace;
+}
+
+.footer .content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer .social-links {
+  margin: 20px 0;
+}
+
+.footer .social-links a {
+  color: #80ded9;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer .social-links a:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.footer .copy {
+  font-size: 0.9em;
+  margin-top: 20px;
+  color: #777;
+}
