@@ -112,13 +112,14 @@
 }
 
 .typing-demo {
-  width: 35ch;
+  width: 70vw; /* Ajuste da largura para 80% da largura da tela */
+  max-width: 35ch; /* Limita a largura a 35 caracteres */
   animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
   font-family: monospace;
-  font-size: 2em;
+  font-size: 4vw;
   color: whitesmoke;
 }
 
